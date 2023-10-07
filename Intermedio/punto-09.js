@@ -1,0 +1,1 @@
+//Agregar la opción de ingresar el número total de estudiantes y las notas correspondientes de cada materia para calcular el promedio por materia.
