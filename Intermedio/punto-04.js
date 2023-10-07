@@ -19,3 +19,5 @@ function sacarEstadoMaterias(nota, nombre) {
 console.log(sacarEstadoMaterias(notaMateria1, nombreAlumno));
 console.log(sacarEstadoMaterias(notaMateria2, nombreAlumno2));
 console.log(sacarEstadoMaterias(notaMateria3, nombreAlumno3));
+
+//A este punto no le pongas atención, profe. Era una prueva pero no la pude tener para hoy. :( jajaja
