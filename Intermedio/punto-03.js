@@ -22,117 +22,42 @@ console.log(sacarEstadoMaterias(notaMateria3));
 
 /*--------------------------------- SOLUCIÓN HECHA EN CLASE --------------------------------------*/
 
-/* [alumno]
-    (nomnbres)
-    (id) 
+const NUM_NOTAS = 3;
+const NUM_MATERIAS = 3;
 
-/** SOLUCIÓN CON FUNCIONES HECHA EN CLASE */
 
-let calificacion;
+const materias = [];
 
-const alumno = {};
-const nota = {};
-const materia = {};
-
-function promedio( notas ) {
-    let suma = 0;
-    for ( let i = 0; i < notas.lenght; i++ ) {
-        suma = suma + notas[ i ];
+for( let j = 0; j < NUM_MATERIAS; j++ ) {
+    const materia = {
+        nombre: prompt( 'Digite el nombre de la materia' )
     }
-
-    return suma / notas.lenght;
-}
-
-function capturarNotas ( cant_notas ) {
-    let notas = [];
-    for ( let i = 0; i < cant_notas; i++ ) {
-        notas.push( Number( prompt( 'Digita tu nota:' )))
-    return notas;
+    
+    const notas = [];
+    for( let i = 0; i < NUM_NOTAS; i++ ) {
+        const nota = Number( prompt( `Digite nota de la materia` ) );
+        notas.push( nota );
     }
-}
-const calificaciones = capturarNotas();
-const resultado = promedio( calificaciones );
-console.log( resultado );
-
-
-
-function capturarMaterias( cant_materias ) {
-    let materias = [];
-    for ( let i = 0; i < cant_materias; i++ ) {
-        const nombreMateria = prompt( 'Digita el nombre de la materia:' );
-
-        const nuevaMateria = {
-            nombre: nombreMateria,
-            notas : capturarNotas( 3 )
-        }
-        
-        materias.push( nuevaMateria );
-    }
-    return materias;
+    
+    materia.notas = notas;
+    materias.push( materia );
 }
 
 
-function capturaDatosAlumno( nombreAlumno ) {
-    const nombre = prompt( 'Digita el nombre del alumno:' );
-    const materias = capturarMaterias( 3 );
 
-    const nombreAlumno = {
-        nombre,
-        materias
-    };
+console.log( materias );
 
-    return nuevoAlumno;
+// Proceso de calcular los promedios
+const promedios = [];
 
+for( let i = 0; i < 3; i++ ) {
+    const notas = materias[ i ].notas;
+
+    let suma = 0
+    for( let j = 0; j < notas.length; j++ ) {
+        suma = suma + notas[ j ];
+    }
+
+    const promedio = suma / notas.length;
+    promedios.push( promedio );
 }
-
-function init( ) {
-    capturaDatosAlumno( 'Maicol' );
-}
-
-init();
-
-
-//---------------------- CLASES -------------------------------------//
-
-class Alumno {
-    constructor( nombre ) {
-        this.nombre= nombres;
-    }
-}
-
-class Materia {
-    constructor( nombre, objNotas ) {
-        this.nombre = nombre;
-        this.notas = objNotas;
-    }
-}
-
-class Nota {
-    constructor() {
-        this.notas = []
-    }
-    agregarUna( nota ) {
-        this.nota.push( nota );
-    }
-    agregarVarias( listaNotas) {
-        this.notas = [ ...this.notas, ...listaNotas ]
-    }
-    reiniciar() {
-        this.notas = [];
-    }
-    promedio() {
-        let suma = 0;
-        for ( const nota of this.notas ) {
-            suma = suma + nota;
-        }
-        return suma / this.notas.length;
-    }
-}
-
-
-const logica = new Materia(
-    'Logica de programacion', 
-    nota
-
-)
-
