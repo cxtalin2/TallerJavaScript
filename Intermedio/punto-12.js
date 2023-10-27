@@ -1,0 +1,1 @@
+//Agregar la opción de ingresar el número total de exámenes y las calificaciones correspondientes de cada examen para calcular el promedio del estudiante.
