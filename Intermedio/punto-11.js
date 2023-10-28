@@ -48,9 +48,9 @@ class Estudiante {
   const estudiante2 = new Estudiante("Mora");
   const estudiante3 = new Estudiante("Bruno");
   
-  estudiante1.ingresarNotasYPorcentajes([85, 90, 75], [30, 40, 30]);
-  estudiante2.ingresarNotasYPorcentajes([75, 88, 92], [40, 30, 30]);
-  estudiante3.ingresarNotasYPorcentajes([78, 86, 90], [30, 30, 40]);
+  estudiante1.ingresarNotasYPorcentajes([85, 90, 75], [37, 40, 30]);
+  estudiante2.ingresarNotasYPorcentajes([75, 88, 92], [40, 25, 30]);
+  estudiante3.ingresarNotasYPorcentajes([78, 86, 90], [30, 29, 40]);
   
   const grupo = new GrupoEstudiantes();
   
